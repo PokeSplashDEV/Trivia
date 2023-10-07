@@ -7,6 +7,8 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
+import network.roanoke.trivia.Events.TriviaEvents;
+import network.roanoke.trivia.Events.Types.AnsweredEvent;
 import network.roanoke.trivia.Trivia;
 import network.roanoke.trivia.Reward.Reward;
 import network.roanoke.trivia.Reward.RewardManager;
@@ -197,6 +199,8 @@ public class QuizManager {
                         Trivia.messages.getMessage("trivia.correct_answer", placeholders)
                 )
         ));
+
+        TriviaEvents.CORRECT_ANSWER.trigger(new AnsweredEvent(player.getUuid()));
 
         currentQuestion = null;
     }
