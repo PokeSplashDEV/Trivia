@@ -7,8 +7,6 @@ import net.fabricmc.fabric.api.message.v1.ServerMessageEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.kyori.adventure.platform.fabric.FabricServerAudiences;
 import net.kyori.adventure.text.minimessage.MiniMessage;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import network.roanoke.trivia.Commands.QuizCommands;
 import network.roanoke.trivia.Quiz.QuizManager;
 import network.roanoke.trivia.Utils.Messages;
